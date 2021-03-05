@@ -1,4 +1,9 @@
     <div class="container mt-4">
+        <div class="col-lg-6">
+            <div class="row">
+                <?php FLasher::flash(); ?>
+            </div>
+        </div>
         <div class="row">
             <div class="col-6">
                 <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#formmodal">
