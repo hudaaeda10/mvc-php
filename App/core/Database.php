@@ -76,4 +76,10 @@ class Database
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    // METHOD MENGETAHUI ADA TAMBAHAN ARRAY KETIKA ADA PROSES INSERT, UPDATE ATAU DELETE
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
+    }
 }
