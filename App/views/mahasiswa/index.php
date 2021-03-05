@@ -12,8 +12,9 @@
                 <h3>Daftar Mahasiswa</h3>
                 <ul class="list-group mt-4">
                     <?php foreach ($data['mhs'] as $mhs) : ?>
-                        <li class="list-group-item d-flex justify-content-between align-items-center"><?= $mhs['nama']; ?>
-                            <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary">Detail</a>
+                        <li class="list-group-item"><?= $mhs['nama']; ?>
+                            <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin?');">Hapus</a>
+                            <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-1">Detail</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -22,6 +23,7 @@
         </div>
     </div>
 
+    <!-- modals -->
     <div class="modal fade" id="formmodal" tabindex="-1" role="dialog" aria-labelledby="judulmodal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
